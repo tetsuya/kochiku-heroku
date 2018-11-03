@@ -10,12 +10,14 @@ provider "heroku" {
 resource "heroku_app" "default" {
   name   = "${var.app_name}"
   region = "us"
+
   config_vars {
-    LANG = "ja_JP.UTF-8",
+    LANG = "ja_JP.UTF-8"
     TZ   = "Asia/Tokyo"
   }
+
   buildpacks = [
-    "heroku/ruby"
+    "heroku/ruby",
   ]
 }
 
