@@ -18,7 +18,7 @@ $ terraform apply \
   -var api_key="YOUR-API-KEY"
 ```
 
-or create a file named env.tfvars with the following contents:
+or create a file named terraform.tfvars with the following contents:
 
 ```
 app_name = "YOUR-APP-NAME"
