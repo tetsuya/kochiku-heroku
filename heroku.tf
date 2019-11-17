@@ -36,7 +36,7 @@ resource "heroku_addon" "database" {
 
 resource "heroku_addon" "monitoring" {
   app  = "${heroku_app.default.name}"
-  plan = "newrelic:wayne"
+  plan = "scout:chair"
 }
 
 resource "heroku_addon" "error-monitoring" {
