@@ -18,17 +18,16 @@ $ terraform apply \
   -var api_key="YOUR-API-KEY"
 ```
 
-or create a file named env.tfvars with the following contents:
+or create a file named `terraform.tfvars` with the following contents:
 
 ```
+api_key  = "YOUR-API-KEY"
 app_name = "YOUR-APP-NAME"
 email    = "YOUR@EMAIL.COM"
-api_key  = "YOUR-API-KEY"
 ```
 
 Then run:
 
 ```
-$ terraform apply \
-  -var-file="env.tfvars"
+$ terraform apply
 ```
