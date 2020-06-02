@@ -15,4 +15,6 @@ resource "heroku_app" "default" {
     LANG = "ja_JP.UTF-8"
     TZ   = "Asia/Tokyo"
   }
+
+  buildpacks = []
 }
