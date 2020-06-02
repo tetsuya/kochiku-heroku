@@ -7,14 +7,12 @@ provider "heroku" {
   email   = var.email
 }
 
-resource "heroku_config" "common" {
-  vars = {
-    LANG = "ja_JP.UTF-8"
-    TZ   = "Asia/Tokyo"
-  }
-}
-
 resource "heroku_app" "default" {
   name   = var.app_name
   region = "us"
+
+  config_vars = {
+    LANG = "ja_JP.UTF-8"
+    TZ   = "Asia/Tokyo"
+  }
 }
